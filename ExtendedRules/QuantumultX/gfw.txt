@@ -1,2 +1,2 @@
 DOMAIN-SUFFIX,poe.com,🚀 节点选择
-DOMAIN-SUFFIX,stboy.com,🚀 节点选择
+DOMAIN-SUFFIX,stboy.net,🚀 节点选择
