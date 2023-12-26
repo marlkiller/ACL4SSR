@@ -15,8 +15,9 @@ def convert_to_loon(surge_file_name):
     with open(LOON_OUT_PATH + surge_file_name, "w") as loon_rule:
         for line in lines:
             if line.startswith("."):
+                line = line.replace("\n", "")
                 # DOMAIN-SUFFIX,xxx.com
-                loon_rule.write(f"DOMAIN-SUFFIX,{line[1:]}")
+                loon_rule.write(f"DOMAIN-SUFFIX,{line[1:]}\n")
 
 
 def get_surge_rules(surge_file_name):
@@ -30,8 +31,9 @@ def convert_to_qx(surge_file_name):
     with open(QX_OUT_PATH + surge_file_name, "w") as loon_rule:
         for line in lines:
             if line.startswith("."):
+                line = line.replace("\n", "")
                 # DOMAIN-SUFFIX,poe.com,🚀 节点选择
-                loon_rule.write(f"DOMAIN-SUFFIX,{line[1:]},🚀 节点选择")
+                loon_rule.write(f"DOMAIN-SUFFIX,{line[1:]},🚀 节点选择\n")
 
 
 def convert(convert_file):
